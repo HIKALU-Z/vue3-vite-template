@@ -18,6 +18,7 @@ import { Test } from './components/Test'
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   <TsxExampleVue />
   <Test />
+  <router-view />
 </template>
 
 <style>
