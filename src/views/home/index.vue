@@ -1,5 +1,7 @@
 <template>
-  <h1>{{ data }}</h1>
+  <h1 class="title">
+    {{ data }}
+  </h1>
   <img
     src="@/assets/logo.png"
     alt=""
@@ -12,5 +14,7 @@ import data from '@/api'
 </script>
 
 <style lang="scss" scoped>
-
+.title {
+  color:$primaryColor;
+}
 </style>
