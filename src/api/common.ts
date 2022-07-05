@@ -2,6 +2,7 @@
  * 公共模块
  */
 import request from '@/utils/request'
+import { IUserInfo } from './types/common'
 
 // interface ResponseData<T> {
 //   status: number
@@ -13,7 +14,7 @@ export const getInfo = () => {
   // return request.get<ResponseData<{
   //   logo_url: string
   // }>>('/api/info')
-  return request<{ logo_url: string }>({
+  return request<IUserInfo>({
     method: 'GET',
     url: '/api/info'
   })
