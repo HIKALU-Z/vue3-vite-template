@@ -28,5 +28,20 @@ export default defineConfig({
         additionalData: '@import "@/styles/variables.scss";'
       }
     }
+  },
+  server: {
+    proxy: {
+      // 字符串简写写法
+      // 选项写法
+      '/api': {
+        target: 'https://localhost:8888/api', // 代理的目标地址
+        // changeOrigin: true，代理服务会把 origin 修改为目标地址 http://jsonplaceholder.typicode.com
+        changeOrigin: true
+
+        // 路径重写
+        // /api/xxx => http://jsonplaceholder.typicode.com/api/xxx
+        // rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
   }
 })
