@@ -6,17 +6,23 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
-import TsxExampleVue from './components/TsxExample.vue'
+// import TsxExampleVue from './components/TsxExample.vue'
 import { Test } from './components/Test'
 </script>
 
 <template>
-  <img
-    alt="Vue logo"
-    src="./assets/logo.png"
-  >
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <TsxExampleVue />
+  <!-- <TsxExampleVue /> -->
+
+  <div>
+    <el-button>测试</el-button>
+  </div>
+  <div>
+    <arco-button type="primary">
+      test
+    </arco-button>
+  </div>
+
   <Test />
   <router-view />
 </template>
