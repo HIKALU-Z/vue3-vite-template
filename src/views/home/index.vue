@@ -10,7 +10,14 @@
 </template>
 
 <script setup lang="ts">
-import data from '@/api'
+import { getInfo } from '@/api/common'
+import { onMounted } from 'vue'
+onMounted(() => {
+  getInfo().then(res => {
+    console.log(res.logo_url)
+  })
+})
+
 </script>
 
 <style lang="scss" scoped>
