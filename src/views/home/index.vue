@@ -28,6 +28,5 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .title {
-  color:$primaryColor;
-}
+  color:$primaryColor}
 </style>

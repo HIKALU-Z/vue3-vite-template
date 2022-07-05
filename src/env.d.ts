@@ -6,3 +6,8 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+// eslint-disable-next-line no-unused-vars
+interface ImportMetaEnv {
+  readonly VITE_APP_BASE_URL:string
+}
