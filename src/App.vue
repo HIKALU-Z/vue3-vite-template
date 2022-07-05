@@ -4,15 +4,15 @@
  -->
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-// import TsxExampleVue from './components/TsxExample.vue'
-import { Test } from './components/Test'
+// // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+// import HelloWorld from './components/HelloWorld.vue'
+// // import TsxExampleVue from './components/TsxExample.vue'
+// import { Test } from './components/Test'
+import locale from 'element-plus/lib/locale/lang/zh-cn'
 </script>
 
 <template>
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <!-- <TsxExampleVue /> -->
+  <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 
   <div>
     <el-button>测试</el-button>
@@ -23,17 +23,16 @@ import { Test } from './components/Test'
     </arco-button>
   </div>
 
-  <Test />
-  <router-view />
+  <Test /> -->
+  <el-config-provider :locale="locale">
+    <router-view />
+  </el-config-provider>
 </template>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
